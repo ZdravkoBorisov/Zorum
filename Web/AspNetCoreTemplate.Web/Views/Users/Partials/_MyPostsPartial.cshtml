@@ -1,0 +1,55 @@
+﻿@model AspNetCoreTemplate.Web.ViewModels.Users.MyProfileViewModel;
+
+
+<link href="~/css/myprofile.css" rel="stylesheet">
+<!------ Include the above in your HEAD tag ---------->
+<!--
+User Profile Sidebar by
+A component of Metronic Theme - #1 Selling Bootstrap 3 Admin Theme in Themeforest: http://j.mp/metronictheme
+Licensed under MIT
+-->
+
+<div class="container">
+
+    <h4>My Most Liked Post</h4>
+    <!--FIX PHOTOS (DOWNLOAD THEM)-->
+    <!-- Card -->
+    <div class="container">
+
+        <div class="card promoting-card col-md-8" style="display:block">
+            <!-- Card content -->
+            <div class="card-body d-flex flex-row">
+                <!-- Avatar -->
+                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" class="rounded-circle mr-3" height="50px" width="50px" alt="avatar">
+                <!-- Content -->
+                <div>
+                    <!-- Title -->
+                    <h4 class="card-title font-weight-bold mb-2">@Model.TopPost.Title</h4>
+                    <!-- Subtitle -->
+                    <p class="card-text"><i class="far fa-clock pr-2"></i>@Model.TopPost.CreatedOn</p>
+                </div>
+            </div>
+            <!-- Card image -->
+            <a class="fas fa-trash-alt float-right p-1 my-1 mr-3" data-toggle="tooltip" data-placement="top" style="color:red" asp-controller="Posts" asp-action="Delete"> Delete</a>
+            <div class="view overlay">
+                <img class="card-img-top rounded-0" src=".ImageURL" alt="Card image cap">
+                <a href="#!">
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+            </div>
+            <!-- Card content -->
+            <div class="card-body">
+                <div class="collapse-content">
+                    <!-- Text -->
+                    <p class="card-text collapse" id="collapseContent">.Description</p>
+                    <!-- Button -->
+                    <a>@Model.TopPost.Likes Likes</a>
+                    <a>@Model.TopPost.Comments.Count Comments</a>
+                    <a class="btn btn-flat red-text p-1 my-1 mr-0 mml-1 collapsed" data-toggle="collapse" href="#collapseContent" aria-expanded="false" aria-controls="collapseContent"></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+

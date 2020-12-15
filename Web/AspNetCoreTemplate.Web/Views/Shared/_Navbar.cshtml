@@ -11,13 +11,13 @@
 <!------ Include the above in your HEAD tag ---------->
 
 <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="/">Kiko</a>
+    <a class="navbar-brand" href="/">Zorum</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     @if (!this.SignInManager.IsSignedIn(this.User))
     {
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav">
             <li class="nav-item active">
                 <a class="nav-link" asp-area="Identity" asp-page="/Account/Register">
                     <i class="fa fa-home"></i>

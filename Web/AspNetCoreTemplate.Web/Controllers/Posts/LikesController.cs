@@ -33,7 +33,7 @@ namespace AspNetCoreTemplate.Web.Controllers.Posts
             var userId = this.userManager.GetUserId(this.User);
             await this.postsService.Like(input.PostId);
 
-            return new LikeResponseViewModel { Count = }
+            return null;
         }
     }
 }

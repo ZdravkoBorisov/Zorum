@@ -16,14 +16,14 @@
             this.likesRepository = likesRepository;
         }
 
-        public int GetLikes(int postId)
-        {
-            var likes = this.likesRepository.All()
-                   .Where(x => x.PostId == postId)
-                   .FirstOrDefault();
+        //public Like GetLikes(int postId)
+        //{
+        //    var likes = await this.likesRepository.All()
+        //           .Where(x => x.PostId == postId)
+        //           .FirstOrDefault();
 
-            return likes;
-        }
+        //    return likes;
+        //}
 
         public Task LikeAsync(int postId, string userId)
         {

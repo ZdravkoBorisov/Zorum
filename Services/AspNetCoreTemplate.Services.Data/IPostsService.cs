@@ -21,5 +21,6 @@
         Task Like(int postId);
 
         IEnumerable<Post> GetTrending();
+
     }
 }
